@@ -8,6 +8,10 @@ body {
   background: linear-gradient(to top, #DADBD2 80%, #009988 20%);
 }
 
+.bold {
+  font-weight: bold;
+}
+
 #app {
   height: 100vh;
   width: 100vw;
@@ -40,15 +44,15 @@ body {
   min-width: 100%;
 }
 
+/* 1/4 Nome utente -------------------------------------------*/
 .nomeUtente {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   height: 90px;
-  border-right: darkgrey solid 1px;
+  border-right: #b1b1b1 solid 1px;
   display: flex;
 }
 
 .nuLeft{
-  /* background-color: red; */
   height: 100%;
   width: 65%;
   display: flex;
@@ -67,7 +71,6 @@ body {
 }
 
 .nuRight{
-  /* background-color: blue; */
   height: 100%;
   width: 35%;
   display: flex;
@@ -81,6 +84,7 @@ body {
   font-size: 20px;
 }
 
+/* 2/4 Ricevi notifiche--------------------------------------- */
 .riceviNotifiche {
   background-color: #76DCFF;
   height: 100px;
@@ -107,10 +111,14 @@ body {
   margin-left: 10px;
 }
 
+.rNtext a {
+  color: #447587;
+}
+
+/* 3/4 cerca o inizia chat--------------------------------------- */
 .cercaOiniziaChat {
   background-color: #FAFAFA;
-  /* background-color: red; */
-  height: 70px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,17 +141,73 @@ body {
   height: 100%;
   margin-left: 10px;
 }
-
-
-
-
-
-
+/* 4/4 lista conversazionii con utenti---------------------- */
 
 .conversazioni {
   background-color: #ffffff;
   flex: 1;
 }
+
+.convContatto {
+  height: 80px;
+  display: flex;
+  border-bottom: 1px solid #e9ebeb;
+  justify-content: space-between;
+}
+
+.cCLeft{
+  /* background-color: yellow; */
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.cCLimage{
+  height: 100%;
+  width: 80px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cCLimage > img {
+  border-radius: 50%;
+  height: 60px;
+
+}
+
+.cCLtext {
+  /* background-color: blue; */
+  text-align: left;
+  height: 100%;
+  flex: 1;
+  padding-top: 10px;
+}
+
+
+
+.cCRight{
+  /* background-color: blue; */
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.cCLtextSubtitle {
+  color: #c7cacb;
+}
+.cCRtextSubtitle {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #c7cacb;
+}
+
+
+
+
 /* FINE LATO SINISTRO */
 /* INIZIO LATO DESTRO */
 .whatsappRight {
