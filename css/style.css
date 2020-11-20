@@ -87,7 +87,7 @@ body {
 /* 2/4 Ricevi notifiche--------------------------------------- */
 .riceviNotifiche {
   background-color: #76DCFF;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -100,8 +100,8 @@ body {
   color: #76DCFF;
   background-color: white;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-left: 15px;
   font-size: 20px;
 }
@@ -209,6 +209,19 @@ body {
 
 
 /* FINE LATO SINISTRO */
+
+
+/* creo una classe active */
+.active {
+  background-color: #e9ebeb;
+  cursor: pointer;
+}
+
+
+
+
+
+
 /* INIZIO LATO DESTRO */
 .whatsappRight {
   background-color: purple;
