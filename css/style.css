@@ -98,7 +98,7 @@ body {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  margin-left: 10px;
+  margin-left: 15px;
   font-size: 20px;
 }
 
@@ -109,8 +109,37 @@ body {
 
 .cercaOiniziaChat {
   background-color: #FAFAFA;
+  /* background-color: red; */
   height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.cOiCinputContainer {
+  width: 95%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.cOiCinputContainer > .fas {
+  color: #b5b9bb;
+  margin-left: 10px;
+}
+.cercaChatsearchBar {
+  border: none;
+  color: #b5b9bb;
+  height: 100%;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
 .conversazioni {
   background-color: #ffffff;
   flex: 1;
