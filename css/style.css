@@ -37,18 +37,76 @@ body {
 }
 
 .whatsappLeft > div {
-  width: 100%;
+  min-width: 100%;
 }
 
-.NomeUtente {
+.nomeUtente {
   background-color: #EAEAEA;
   height: 90px;
   border-right: darkgrey solid 1px;
+  display: flex;
 }
+
+.nuLeft{
+  /* background-color: red; */
+  height: 100%;
+  width: 65%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nuLimage > img {
+  border-radius: 50%;
+  height: 70px;
+  margin-left: 10px;
+}
+
+.nuLname {
+  margin-left: 5px;
+}
+
+.nuRight{
+  /* background-color: blue; */
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nuRight > .fas {
+  color: #b1b1b1;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 .riceviNotifiche {
   background-color: #76DCFF;
   height: 100px;
+  display: flex;
+  align-items: center;
 }
+
+.rNicona i {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: #76DCFF;
+  background-color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.rNtext > div {
+  text-align: left;
+  margin-left: 10px;
+}
+
 .cercaOiniziaChat {
   background-color: #FAFAFA;
   height: 70px;
