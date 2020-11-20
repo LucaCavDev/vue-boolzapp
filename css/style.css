@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #DADBD2 80%, #009988 20%);
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  height: 90vh;
+  width: 80vw;
+}
+.whatsappWindow {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+}
+
+/* INIZIO LATO SINISTRO */
+.whatsappLeft {
+  background-color: blue;
+  width: 30%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsappLeft > div {
+  width: 100%;
+}
+
+.NomeUtente {
+  background-color: #EAEAEA;
+  height: 90px;
+  border-right: darkgrey solid 1px;
+}
+.riceviNotifiche {
+  background-color: #76DCFF;
+  height: 100px;
+}
+.cercaOiniziaChat {
+  background-color: #FAFAFA;
+  height: 70px;
+}
+.conversazioni {
+  background-color: #ffffff;
+  flex: 1;
+}
+/* FINE LATO SINISTRO */
+/* INIZIO LATO DESTRO */
+.whatsappRight {
+  background-color: purple;
+  width: 70%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navChat {
+  background-color: #EAEAEA;
+  height: 90px;
+}
+.chat {
+  background-color: #dcd4cd;
+  flex: 1;
+  background-image: url(../img/mine.jpg);
+}
+.scriviMessaggio {
+  background-color: #f4eee9;
+  height: 90px;
+}
+/* FINE LATO DESTRO */
