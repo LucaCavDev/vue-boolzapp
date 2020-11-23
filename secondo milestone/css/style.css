@@ -38,13 +38,10 @@ body {
 .whatsappLeft {
   /* background-color: blue; */
   width: 30%;
+  min-width: 290px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.whatsappLeft > div {
-  min-width: 100%;
 }
 
 /* 1/4 Nome utente -------------------------------------------*/
@@ -152,7 +149,6 @@ body {
   background-color: #ffffff;
   flex: 1;
   overflow: auto;
-
 }
 
 .convContatto {
@@ -274,24 +270,17 @@ body {
 
 .navChatLnameTitle{
   flex: 1;
-  /* background-color: yellow; */
   display: flex;
   align-items: flex-end;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 .navChatLnameSubtitle{
-  padding-top: 5px;
+  padding-top: 2px;
   flex: 1;
-  /* background-color: green; */
+  color: #c7cacb;
 }
 
-
-/* .cCLtextSubtitle {
-  color: #c7cacb;
-} */
-
 .navChatRight{
-  /* background-color: red; */
   height: 100%;
   width: 20%;
   display: flex;
@@ -305,7 +294,6 @@ body {
   font-size: 20px;
 }
 
-
 /* 2/3 Chat grande */
 .chat {
   background-color: #dcd4cd;
@@ -317,38 +305,11 @@ body {
 .paginaMessaggiata {
   width: 100%;
   height: 100%;
-  display: flex;
 }
 
-
-.Michele {
-  /* background-color: red; */
-  display: none;
-}
-
-.Fabio {
-  /* background-color: blue; */
-  display: none;
-}
-.Samuele {
-  /* background-color: green; */
-  display: none;
-}
-.Luisa {
-  /* background-color: yellow; */
-  display: none;
-}
-
-
-
-.conversazioneInCorso {
-  display: block;
-  /* il block va posizionato opo la dichiarazione di display none, o gli va aggiunta !important se no l'ulitimo display: qualcosa ; decide */
-}
 .rigaMessaggi {
   width: 100%;
   display: flex;
-  /* border: 1px solid black; */
   padding: 20px;
 }
 
@@ -358,6 +319,7 @@ body {
   padding-right: 10px;
   padding-bottom: 5px;
   min-width: 300px;
+  border-radius: 10px;
 }
 
 .flexInv {
@@ -368,10 +330,26 @@ body {
   justify-content: flex-start;
 }
 
+.inviato {
+  justify-content: flex-end;
+}
+
+.ricevuto {
+  justify-content: flex-start;
+}
+
 .Inviati {
   background-color: #cbfbb3;
 }
 .Ricevuti {
+  background-color: white;
+}
+
+.mexVerde{
+  background-color: #cbfbb3;
+}
+
+.mexBianco{
   background-color: white;
 }
 
@@ -423,17 +401,6 @@ body {
   padding-left: 20px;
   border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* FINE LATO DESTRO */
