@@ -187,6 +187,8 @@ body {
   height: 100%;
   flex: 1;
   padding-top: 10px;
+  overflow: hidden;
+
 }
 .cCLtextSubtitle {
   color: #c7cacb;
