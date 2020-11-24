@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cavicchioli Boolzapp 3 milestone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="contenitore">
+        <div class="whatsappWindow">
+          <!-- LEFT SIDE -->
+          <div class="whatsappLeft">
+
+            <!-- 1/4 Nome utente ------------------------------->
+            <div class="nomeUtente">
+              <div class="nuLeft">
+                <div class="nuLimage">
+                  <img src="img/avatar_io.jpg" alt="">
+                </div>
+                <div class="nuLname bold">
+                  Nome Utente
+                </div>
+
+              </div>
+              <div class="nuRight">
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+            </div>
+
+            <!-- 2/4 Ricevi notifiche------------------------------------------>
+            <div class="riceviNotifiche">
+              <div class="rNicona">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <div class="rNtext">
+                <div class="rNtextTitle bold">
+                  Ricevi notifiche di nuovi messaggi
+                </div>
+                <div class="rNtextSubtitle">
+                  <a href="#">Attiva notifiche desktop</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3/4 cerca o inizia chat----------------------------------------->
+            <div class="cercaOiniziaChat">
+              <div class="cOiCinputContainer">
+                <i class="fas fa-search"></i>
+                <input type="text" class="cercaChatsearchBar" name="" value="" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+            <!-- 4/4 lista conversazioni con utenti------------------------>
+            <div class="conversazioni">
+              <ul>
+                <li
+                @click="selezionaChat(index)"
+                v-for="(contatto, index) in contatti4"
+                v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null"
+                >
+                  <div class="convContatto">
+                    <div class="cCLeft">
+                      <div class="cCLimage">
+                        <img :src="contatto.immagine" :alt="contatto.nome">
+                      </div>
+                      <div class="cCLtext">
+                        <div class="cCLtextTitle bold">
+                          {{contatto.nome}}
+                        </div>
+                        <div class="cCLtextSubtitle">
+                          {{contatto.messaggi[contatto.messaggi.length - 1].mex}}
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="cCRight">
+                      <div class="cCRtextSubtitle">
+                        <div class="">
+                          {{contatto.messaggi[contatto.messaggi.length - 1].dataOraMex}}
+                          <!-- {{mostraLastDataOraMex(contatto)}} -->
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="whatsappRight">
+            <!-- 1/3 navChat -->
+            <div class="navChat">
+
+              <div class="navChatLeft">
+                <div class="navChatLimage">
+                  <img :src="contatti4[contattiIndice].immagine" alt="">
+                </div>
+                <div class="navChatLname">
+
+                  <div class="navChatLnameTitle bold">
+                    <span>{{contatti4[contattiIndice].nome}}</span>
+                  </div>
+                  <div class="navChatLnameSubtitle">
+                    Ultimo accesso: {{contatti4[contattiIndice].messaggi[contatti4[contattiIndice].messaggi.length - 1].dataOraMex}}
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="navChatRight">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-paperclip"></i>
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+
+            </div>
+            <!-- 2/3 Chat grande -->
+            <div class="chat">
+
+              <div class="paginaMessaggiata">
+                <div v-for="elemMex in contatti4[contattiIndice].messaggi">
+                  <div class="rigaMessaggi" :class="elemMex.invOric">
+                    <div class="box-chat" :class="elemMex.colore">
+                      <div class="textMexAllineatoSinistra">
+                        {{elemMex.mex}}
+                      </div>
+                      <div class="dataOraMex">
+                        {{elemMex.dataOraMex}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+            <!-- 3/3 scrivimessaggio -->
+            <div class="scriviMessaggio">
+              <div class="scriviInputContainer">
+                <i class="far fa-smile"></i>
+                <input
+                @keyup.enter="inviaMessaggio(contattiIndice)"
+                type="text"
+                v-model="testoNuovoMessaggio"
+                class="scriviChatBar"
+                placeholder="Scrivi un messaggio">
+                <i @click="inviaMessaggio(contattiIndice)" class="fas fa-microphone"></i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #DADBD2 80%, #009988 20%);
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenitore {
+  height: 90vh;
+  width: 80vw;
+}
+.whatsappWindow {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* INIZIO LATO SINISTRO */
+.whatsappLeft {
+  /* background-color: blue; */
+  width: 30%;
+  min-width: 290px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1/4 Nome utente -------------------------------------------*/
+.nomeUtente {
+  background-color: #eaeaea;
+  height: 90px;
+  border-right: #b1b1b1 solid 1px;
+  display: flex;
+}
+
+.nuLeft{
+  height: 100%;
+  width: 65%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nuLimage > img {
+  border-radius: 50%;
+  height: 70px;
+  margin-left: 10px;
+}
+
+.nuLname {
+  margin-left: 5px;
+}
+
+.nuRight{
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nuRight > .fas {
+  color: #b1b1b1;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* 2/4 Ricevi notifiche--------------------------------------- */
+.riceviNotifiche {
+  background-color: #76DCFF;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.rNicona i {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: #76DCFF;
+  background-color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.rNtext > div {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.rNtext a {
+  color: #447587;
+}
+
+/* 3/4 cerca o inizia chat--------------------------------------- */
+.cercaOiniziaChat {
+  /* background-color: red; */
+  background-color: #FAFAFA;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cOiCinputContainer {
+  width: 95%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.cOiCinputContainer > .fas {
+  color: #b5b9bb;
+  margin-left: 10px;
+}
+.cercaChatsearchBar {
+  border: none;
+  color: #b5b9bb;
+  height: 100%;
+  margin-left: 10px;
+  width: 100%;
+}
+/* 4/4 lista conversazionii con utenti---------------------- */
+
+.conversazioni {
+  background-color: #ffffff;
+  flex: 1;
+  overflow: auto;
+}
+
+.convContatto {
+  height: 80px;
+  display: flex;
+  border-bottom: 1px solid #e9ebeb;
+  justify-content: space-between;
+}
+
+.cCLeft{
+  /* background-color: yellow; */
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.cCLimage{
+  height: 100%;
+  width: 80px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cCLimage > img {
+  border-radius: 50%;
+  height: 60px;
+
+}
+
+.cCLtext {
+  /* background-color: blue; */
+  text-align: left;
+  height: 100%;
+  flex: 1;
+  padding-top: 10px;
+  overflow: hidden;
+
+}
+.cCLtextSubtitle {
+  color: #c7cacb;
+}
+
+
+.cCRight{
+  /* background-color: blue; */
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.cCRtextSubtitle {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #c7cacb;
+}
+
+
+
+
+/* FINE LATO SINISTRO */
+
+
+/* creo una classe active */
+.active {
+  background-color: #e9ebeb;
+  cursor: pointer;
+}
+
+/* INIZIO LATO DESTRO */
+.whatsappRight {
+  background-color: purple;
+  width: 70%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* 1/3 navChat */
+.navChat {
+  background-color: #EAEAEA;
+  height: 90px;
+  display: flex;
+}
+
+
+.navChatLeft{
+  /* background-color: blue; */
+  height: 100%;
+  width: 80%;
+  display: flex;
+  /* justify-content: left; */
+  align-items: center;
+}
+
+.navChatLimage {
+  height: 90px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navChatLimage > img {
+  border-radius: 50%;
+  height: 70px;
+  /* margin-left: 10px; */
+}
+
+.navChatLname {
+  /* background-color: blue; */
+  text-align: left;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navChatLnameTitle{
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+}
+.navChatLnameSubtitle{
+  padding-top: 2px;
+  flex: 1;
+  color: #c7cacb;
+}
+
+.navChatRight{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navChatRight > .fas {
+  color: #b1b1b1;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* 2/3 Chat grande */
+.chat {
+  background-color: #dcd4cd;
+  flex: 1;
+  background-image: url(../img/mine.jpg);
+  overflow: auto;
+}
+
+.esp1 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.esp2 {
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.paginaMessaggiata {
+  width: 100%;
+  height: 100%;
+}
+
+.rigaMessaggi {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+
+.box-chat {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  min-width: 300px;
+  border-radius: 10px;
+}
+
+
+.inviato {
+  justify-content: flex-end;
+}
+
+.ricevuto {
+  justify-content: flex-start;
+}
+
+.mexVerde{
+  background-color: #cbfbb3;
+}
+
+.mexBianco{
+  background-color: white;
+}
+
+.textMexAllineatoSinistra {
+  text-align: left;
+}
+
+.dataOraMex{
+  color: grey;
+  text-align: right;
+  font-size: 10px;
+}
+
+
+/* 3/3 scrivimessaggio */
+.scriviMessaggio {
+  background-color: #f4eee9;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.scriviInputContainer {
+  width: 90%;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.scriviInputContainer > .fas,.far {
+  color: #b5b9bb;
+  margin-left: 10px;
+  font-size: 30px;
+}
+.fa-microphone {
+  cursor: pointer;
+}
+
+
+.scriviChatBar {
+  border: none;
+  /* color: #b5b9bb; */
+  height: 70%;
+  width: 85%;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+
+/* FINE LATO DESTRO */
