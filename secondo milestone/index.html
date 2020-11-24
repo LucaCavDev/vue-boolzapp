@@ -8,6 +8,8 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="app">
@@ -59,7 +61,11 @@
             <!-- 4/4 lista conversazioni con utenti------------------------>
             <div class="conversazioni">
               <ul>
-                <li @click="selezionaChat(index)" v-for="(contatto, index) in contatti4" v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null">
+                <li
+                @click="selezionaChat(index)"
+                v-for="(contatto, index) in contatti4"
+                v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null"
+                >
                   <div class="convContatto">
                     <div class="cCLeft">
                       <div class="cCLimage">
@@ -82,6 +88,7 @@
                       <div class="cCRtextSubtitle">
                         <div class="">
                           {{contatto.messaggi[contatto.messaggi.length - 1].dataOraMex}}
+                          <!-- {{mostraLastDataOraMex(contatto)}} -->
                         </div>
 
                       </div>
@@ -130,14 +137,14 @@
             <!-- 2/3 Chat grande -->
             <div class="chat">
               <div class="paginaMessaggiata">
-                <div v-for="mex in contatti4[contattiIndice].messaggi"  >
-                  <div class="rigaMessaggi" :class="mex.invOric">
-                    <div class="box-chat" :class="mex.colore">
-                      <div class="mex">
-                        {{mex.mex}}
+                <div v-for="elemMex in contatti4[contattiIndice].messaggi">
+                  <div class="rigaMessaggi" :class="elemMex.invOric">
+                    <div class="box-chat" :class="elemMex.colore">
+                      <div class="textMexAllineatoSinistra">
+                        {{elemMex.mex}}
                       </div>
                       <div class="dataOraMex">
-                        {{mex.dataOraMex}}
+                        {{elemMex.dataOraMex}}
                       </div>
                     </div>
                   </div>

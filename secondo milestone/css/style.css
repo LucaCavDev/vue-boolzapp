@@ -6,6 +6,8 @@
 
 body {
   background: linear-gradient(to top, #DADBD2 80%, #009988 20%);
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
 }
 
 .bold {
@@ -142,6 +144,7 @@ body {
   color: #b5b9bb;
   height: 100%;
   margin-left: 10px;
+  width: 100%;
 }
 /* 4/4 lista conversazionii con utenti---------------------- */
 
@@ -324,13 +327,6 @@ body {
   border-radius: 10px;
 }
 
-.flexInv {
-  justify-content: flex-end;
-}
-
-.flexRic {
-  justify-content: flex-start;
-}
 
 .inviato {
   justify-content: flex-end;
@@ -338,13 +334,6 @@ body {
 
 .ricevuto {
   justify-content: flex-start;
-}
-
-.Inviati {
-  background-color: #cbfbb3;
-}
-.Ricevuti {
-  background-color: white;
 }
 
 .mexVerde{
@@ -355,7 +344,7 @@ body {
   background-color: white;
 }
 
-.mex {
+.textMexAllineatoSinistra {
   text-align: left;
 }
 
@@ -396,7 +385,7 @@ body {
 
 .scriviChatBar {
   border: none;
-  color: #b5b9bb;
+  /* color: #b5b9bb; */
   height: 70%;
   width: 85%;
   margin-left: 10px;
