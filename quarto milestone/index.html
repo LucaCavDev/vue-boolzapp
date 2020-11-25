@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cavicchioli Boolzapp 3 milestone</title>
+    <title>Cavicchioli Boolzapp 4 milestone</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
@@ -55,14 +55,14 @@
             <div class="cercaOiniziaChat">
               <div class="cOiCinputContainer">
                 <i class="fas fa-search"></i>
-                <input type="text" class="cercaChatsearchBar" name="" value="" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" class="cercaChatsearchBar" v-model="modelloRicercaContatto" @keyup="cercaConversazione" placeholder="Cerca o inizia una nuova chat">
               </div>
             </div>
             <!-- 4/4 lista conversazioni con utenti------------------------>
             <div class="conversazioni">
               <ul>
                 <li
-                @click="selezionaChat(index)"
+                @click="selezionaChat(index), scrollDown()"
                 v-for="(contatto, index) in contatti4"
                 v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null"
                 >

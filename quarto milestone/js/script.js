@@ -103,7 +103,10 @@ var app = new Vue ({
 
     testoNuovoMessaggio: '',//aggiungo un dato vuoto da riempire con il messaggio che viene compilato dall'utente nella chat bar
 
-    rispostaNuovoMessaggio: ''
+    rispostaNuovoMessaggio: '', // riempito con il contenuto della funzione rispostaAutomatica
+
+    modelloRicercaContatto: ''//viene riempito dal testo che scrivo nella barra di ricerca
+
 
   },//FINE DATA
 
@@ -113,18 +116,31 @@ var app = new Vue ({
       this.contattiIndice = i
     },
 
+    oraDataNuovoMex: function () {
+      //setto il momento attuale
+      let adesso = new Date();
+      // //trovo giorno mese anno
+      let gg = adesso.getDate();
+      let mm = adesso.getMonth() + 1;
+      let yyyy = adesso.getFullYear();
+      let orario = adesso.toLocaleTimeString();;
+      //li metto assieme
+      let asd = (gg + '/' + mm + '/' + yyyy + ' ' + orario);
+      return asd;
+    },
+
     inviaMessaggio: function(i) {
       //cre una variabile che contiene il nuovo messaggio, con testo inserito e caratteristiche varie
       let testoNuovoMessaggio = {
         mex: this.testoNuovoMessaggio, //preso dal v-model
-        dataOraMex: 'dobbiamo ancora sistemare le date',
+        dataOraMex: this.oraDataNuovoMex(),
         invOric: 'inviato',
         colore: 'mexVerde'
       }
       this.contatti4[i].messaggi.push(testoNuovoMessaggio);
       this.testoNuovoMessaggio = ''; //classica stringa per svuotare il vmodel dopo invio messaggio.
       //adesso dobbiamo mettere sempre qua dentro, una funzione che rimanda dopo 1 secondo un messaggio con testo preimpostato
-      app.rispostaAutomatica(i);
+      app.rispostaAutomatica(i); // ALTERNATIVA era attivarsi al click o al premere invio
     },
 
     rispostaAutomatica: function(i) {
@@ -134,25 +150,23 @@ var app = new Vue ({
           let rispostaNuovoMessaggio =
           {
             mex: 'sisi ok basta che stai zitto',
-            dataOraMex: 'altra data da sistemare',
+            dataOraMex: 'this.oraDataNuovoMex()',//this.oraDataNuovoMex()
             invOric: 'ricevuto',
             colore: 'mexBianco'
           }
           conversazioneInCorso.messaggi.push(rispostaNuovoMessaggio);
-        }, 1000
-      )
+        },
+      1000)
     },
-
     scrollDown(){
       setTimeout(()=>{
         var container = document.getElementById('chatXY');
         container.scrollTop = container.scrollHeight;
       },5);
-    }
+    },
 
-    // messaggiRicevuti: contatti4.filter(function(hero) {
-    //   return hero.franchise == “Marvel”;
-    // });
+
+
 
     // mostraLastDataOraMex: function(contatto) {
     //   if () {
@@ -160,6 +174,29 @@ var app = new Vue ({
     //   }
     //   return dataOra;
     // }
+
+
+    //----------------------------------------------------------
+    //4 milestone   cerca contatto nella search background
+    cercaConversazione: function() {
+      let modelloRicercaContatto = this.modelloRicercaContatto.toLowerCase();  this.contatti4.forEach((element) => {
+        if(element.nome.toLowerCase().includes(modelloRicercaContatto)) {
+          element.attivo = true;
+        } else {
+          element.attivo = false;
+        };
+      });
+    },
+
   }
 
 });
+
+// function scrollBarBottom() {
+//   setTimeout(function() {
+//       let chat = document.getElementById('chat');
+//
+//       chat.scrollTop = chat.scrollHeight - chat.clientHeight;
+//
+//   }, 100);
+// }
