@@ -162,7 +162,7 @@ var app = new Vue ({
       setTimeout(()=>{
         var container = document.getElementById('chatXY');
         container.scrollTop = container.scrollHeight;
-      },5);
+      },0);
     },
 
 

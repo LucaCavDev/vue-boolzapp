@@ -137,19 +137,19 @@
             <!-- 2/3 Chat grande -->
             <div class="chat">
 
-              <div class="paginaMessaggiata" id="chatXY"><!--id="chatXY"-->
-                <div v-for="elemMex in contatti4[contattiIndice].messaggi">
-                  <div class="rigaMessaggi" :class="elemMex.invOric">
-                    <div class="box-chat" :class="elemMex.colore">
-                      <div class="textMexAllineatoSinistra">
-                        {{elemMex.mex}}
-                      </div>
-                      <div class="dataOraMex">
-                        {{elemMex.dataOraMex}}
+              <div class="paginaMessaggiata"><!--id="chatXY"-->
+                  <div id="chatXY" v-for="elemMex in contatti4[contattiIndice].messaggi">
+                    <div class="rigaMessaggi" :class="elemMex.invOric">
+                      <div class="box-chat" :class="elemMex.colore">
+                        <div class="textMexAllineatoSinistra">
+                          {{elemMex.mex}}
+                        </div>
+                        <div class="dataOraMex">
+                          {{elemMex.dataOraMex}}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
               </div>
 
