@@ -141,7 +141,6 @@ var app = new Vue ({
       this.testoNuovoMessaggio = ''; //classica stringa per svuotare il vmodel dopo invio messaggio.
       //adesso dobbiamo mettere sempre qua dentro, una funzione che rimanda dopo 1 secondo un messaggio con testo preimpostato
       this.rispostaAutomatica(i);
-      this.scrollDown(i);
       // ALTERNATIVA era attivarsi al click o al premere invio
       //funziona anche se metto app invece di this
     },
@@ -158,21 +157,36 @@ var app = new Vue ({
             colore: 'mexBianco'
           }
           conversazioneInCorso.messaggi.push(rispostaNuovoMessaggio);
-          this.scrollDown(i);
+
         },
-      1000)
+      1000), this.scroll();
 
     },
 
 
-    scrollDown: function(i) {
-      setTimeout(
-        ()=>{
-          let chat = document.getElementById("chatXY");
-          chat.scrollTop = chat.scrollHeight;
-        },
-      1)
+    // scrollDown: function() {
+    //   setTimeout(
+    //     ()=>{
+    //       let chat = document.getElementById("chatXY");
+    //       chat.scrollTop = chat.scrollHeight;
+    //     },
+    //   1)
+    // },
+
+    // setTimeout(() => (this.getTime(),this.users[this.selected].chat.push({...this.cpuMsg}),this.scrollAuto()), 1000);
+
+    scrollToEnd: function() {
+      let chat = this.$el.querySelector("#chatXY");
+      chat.scrollTop = chat.scrollHeight;
     },
+
+    scroll: function() {
+      setTimeout(this.scrollToEnd, 0);
+    },
+// io l'ho divisa in due funzioni
+// e dentro la risposta automatica ho messo this.scroll();
+//
+
 
 
 

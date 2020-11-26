@@ -62,7 +62,7 @@
             <div class="conversazioni">
               <ul>
                 <li
-                @click="selezionaChat(index), scrollDown()"
+                @click="selezionaChat(index)"
                 v-for="(contatto, index) in contatti4"
                 v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null"
                 >
