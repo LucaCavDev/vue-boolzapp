@@ -140,30 +140,41 @@ var app = new Vue ({
       this.contatti4[i].messaggi.push(testoNuovoMessaggio);
       this.testoNuovoMessaggio = ''; //classica stringa per svuotare il vmodel dopo invio messaggio.
       //adesso dobbiamo mettere sempre qua dentro, una funzione che rimanda dopo 1 secondo un messaggio con testo preimpostato
-      app.rispostaAutomatica(i); // ALTERNATIVA era attivarsi al click o al premere invio
+      this.rispostaAutomatica(i);
+      this.scrollDown(i);
+      // ALTERNATIVA era attivarsi al click o al premere invio
+      //funziona anche se metto app invece di this
     },
 
     rispostaAutomatica: function(i) {
       let conversazioneInCorso = this.contatti4[i];
       setTimeout(
-        function() {
+        ()=> {//senza usare arrow functiojn usare app invece di this in dataOraMex
           let rispostaNuovoMessaggio =
           {
             mex: 'sisi ok basta che stai zitto',
-            dataOraMex: 'this.oraDataNuovoMex()',//this.oraDataNuovoMex()
+            dataOraMex: this.oraDataNuovoMex(),
             invOric: 'ricevuto',
             colore: 'mexBianco'
           }
           conversazioneInCorso.messaggi.push(rispostaNuovoMessaggio);
+          this.scrollDown(i);
         },
       1000)
+
     },
-    scrollDown(){
-      setTimeout(()=>{
-        var container = document.getElementById('chatXY');
-        container.scrollTop = container.scrollHeight;
-      },0);
+
+
+    scrollDown: function(i) {
+      setTimeout(
+        ()=>{
+          let chat = document.getElementById("chatXY");
+          chat.scrollTop = chat.scrollHeight;
+        },
+      1)
     },
+
+
 
 
 
