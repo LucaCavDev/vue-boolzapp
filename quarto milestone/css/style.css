@@ -293,11 +293,16 @@ body {
   justify-content: flex-end;
 }
 
-.navChatRight > .fas {
+.navChatRight .fas {
   color: #b1b1b1;
   margin-right: 15px;
   font-size: 20px;
 }
+
+input[type="file"] {
+  display: none;
+}
+
 
 /* 2/3 Chat grande */
 .chat {

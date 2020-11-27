@@ -165,33 +165,40 @@ var app = new Vue ({
 
     },
 
+    //Opzione 1
+    scroll: function() {
+      setTimeout(
+        ()=>{
+          let chat = document.getElementById("chatXY");
+          chat.scrollTop = chat.scrollHeight;
+        },
+      1)
+    },
+    //fine opzione1
+    //opz 1.5
+    // function scrollBarBottom() {
+    //   setTimeout(function() {
+    //       let chat = document.getElementById('chat');
+    //       chat.scrollTop = chat.scrollHeight - chat.clientHeight;
+    //   }, 100);
+    // }
+    //fine opz 1.5
 
-    // scrollDown: function() {
-    //   setTimeout(
-    //     ()=>{
-    //       let chat = document.getElementById("chatXY");
-    //       chat.scrollTop = chat.scrollHeight;
-    //     },
-    //   1)
+    // optione 2 jquery con divisione funzione di scroll - timeout
+
+    // scrollToEnd: function() {
+    //   let chat = this.$el.querySelector("#chatXY");
+    //   chat.scrollTop = chat.scrollHeight;
+    //   console.log(chat);
     // },
 
-    // setTimeout(() => (this.getTime(),this.users[this.selected].chat.push({...this.cpuMsg}),this.scrollAuto()), 1000);
-
-
-
-    scrollToEnd: function() {
-      let chat = this.$el.querySelector("#chatXY");
-      chat.scrollTop = chat.scrollHeight;
-      console.log(chat);
-    },
-
-    scroll: function() {
-      setTimeout(this.scrollToEnd, 0);
-    },
+    // scroll: function() {
+    //   setTimeout(this.scrollToEnd, 0);
+    // },
     // io l'ho divisa in due funzioni
     // e dentro la risposta automatica ho messo this.scroll();
     //
-
+    //fine opzione 3
 
 
 
@@ -221,12 +228,3 @@ var app = new Vue ({
   }
 
 });
-
-// function scrollBarBottom() {
-//   setTimeout(function() {
-//       let chat = document.getElementById('chat');
-//
-//       chat.scrollTop = chat.scrollHeight - chat.clientHeight;
-//
-//   }, 100);
-// }
