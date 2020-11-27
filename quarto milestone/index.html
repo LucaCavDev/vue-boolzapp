@@ -55,16 +55,23 @@
             <div class="cercaOiniziaChat">
               <div class="cOiCinputContainer">
                 <i class="fas fa-search"></i>
-                <input type="text" class="cercaChatsearchBar" v-model="modelloRicercaContatto" @keyup="cercaConversazione" placeholder="Cerca o inizia una nuova chat">
+                <input
+                  type="text"
+                  class="cercaChatsearchBar"
+                  v-model="modelloRicercaContatto"
+                  @keyup="cercaConversazione"
+                  placeholder="Cerca o inizia una nuova chat"
+                >
               </div>
             </div>
             <!-- 4/4 lista conversazioni con utenti------------------------>
             <div class="conversazioni">
               <ul>
                 <li
-                @click="selezionaChat(index)"
-                v-for="(contatto, index) in contatti4"
-                v-if="contatto.attivo" :class="index == contattiIndice ? 'active': null"
+                  @click="selezionaChat(index)"
+                  v-for="(contatto, index) in contatti4"
+                  v-if="contatto.attivo"
+                  :class="index == contattiIndice ? 'active': null"
                 >
                   <div class="convContatto">
                     <div class="cCLeft">
@@ -112,7 +119,7 @@
 
               <div class="navChatLeft">
                 <div class="navChatLimage">
-                  <img :src="contatti4[contattiIndice].immagine" alt="">
+                  <img :src="contatti4[contattiIndice].immagine">
                 </div>
                 <div class="navChatLname">
 
