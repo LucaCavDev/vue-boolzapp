@@ -140,6 +140,7 @@ var app = new Vue ({
       this.contatti4[i].messaggi.push(testoNuovoMessaggio);
       this.testoNuovoMessaggio = ''; //classica stringa per svuotare il vmodel dopo invio messaggio.
       //adesso dobbiamo mettere sempre qua dentro, una funzione che rimanda dopo 1 secondo un messaggio con testo preimpostato
+      this.scroll();
       this.rispostaAutomatica(i);
       // ALTERNATIVA era attivarsi al click o al premere invio
       //funziona anche se metto app invece di this
