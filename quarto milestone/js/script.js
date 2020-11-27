@@ -157,9 +157,10 @@ var app = new Vue ({
             colore: 'mexBianco'
           }
           conversazioneInCorso.messaggi.push(rispostaNuovoMessaggio);
+          this.scroll();
 
         },
-      1000), this.scroll();
+      1000)
 
     },
 
@@ -180,14 +181,15 @@ var app = new Vue ({
     scrollToEnd: function() {
       let chat = this.$el.querySelector("#chatXY");
       chat.scrollTop = chat.scrollHeight;
+      console.log(chat);
     },
 
     scroll: function() {
       setTimeout(this.scrollToEnd, 0);
     },
-// io l'ho divisa in due funzioni
-// e dentro la risposta automatica ho messo this.scroll();
-//
+    // io l'ho divisa in due funzioni
+    // e dentro la risposta automatica ho messo this.scroll();
+    //
 
 
 
