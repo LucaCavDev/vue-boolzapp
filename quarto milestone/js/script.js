@@ -175,6 +175,8 @@ var app = new Vue ({
 
     // setTimeout(() => (this.getTime(),this.users[this.selected].chat.push({...this.cpuMsg}),this.scrollAuto()), 1000);
 
+
+
     scrollToEnd: function() {
       let chat = this.$el.querySelector("#chatXY");
       chat.scrollTop = chat.scrollHeight;
