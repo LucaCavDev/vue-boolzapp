@@ -65,6 +65,7 @@ body {
 .nuLimage > img {
   border-radius: 50%;
   height: 70px;
+  width: 70px;
   margin-left: 10px;
 }
 
@@ -181,7 +182,7 @@ body {
 .cCLimage > img {
   border-radius: 50%;
   height: 60px;
-
+  width: 60px;
 }
 
 .cCLtext {

@@ -6,8 +6,8 @@ var app = new Vue ({
     // indice dei 4 contatti posto uguale a 0 come nello slider dove si assegnava la classe active tramite l'indice
     contatti4: [
       {
-        nome: 'Michele',
-        immagine: 'img/avatar_1.jpg',
+        nome: 'Piky',
+        immagine: 'img/pikachu.png',
         attivo: true,
         messaggi: [
           {
@@ -23,7 +23,7 @@ var app = new Vue ({
             colore: 'mexVerde'
           },
           {
-            mex: 'Tutto fatto!',
+            mex: 'Pika pika, pikachu!',
             dataOraMex: '10/01/2020 16:15:22',
             invOric: 'ricevuto',
             colore: 'mexBianco'
@@ -31,8 +31,8 @@ var app = new Vue ({
         ]
       },
       {
-        nome: 'Fabio',
-        immagine: 'img/avatar_2.jpg',
+        nome: 'Bulby',
+        immagine: 'img/bulbasaur.jpg',
         attivo: true,
         messaggi: [
           {
@@ -42,7 +42,7 @@ var app = new Vue ({
             colore: 'mexVerde'
           },
           {
-            mex: 'Bene grazie! Stasera ci vediamo?',
+            mex: 'Bulba saur! Bulba sa bulbasau?',
             dataOraMex: '10/01/2020 16:30:55',
             invOric: 'ricevuto',
             colore: 'mexBianco'
@@ -56,12 +56,12 @@ var app = new Vue ({
         ]
       },
       {
-        nome: 'Samuele',
-        immagine: 'img/avatar_3.jpg',
+        nome: 'Squirty',
+        immagine: 'img/squirtle.jpg',
         attivo: true,
         messaggi: [
           {
-            mex: 'La Marianna va in campagna',
+            mex: 'Lo Squirtle va in campagna',
             dataOraMex: '28/03/2020 10:10:40',
             invOric: 'ricevuto',
             colore: 'mexBianco'
@@ -73,7 +73,7 @@ var app = new Vue ({
             colore: 'mexVerde'
           },
           {
-            mex: 'Ah Scusa!',
+            mex: 'Ah Squirtle!',
             dataOraMex: '28/03/2020 16:15:22',
             invOric: 'ricevuto',
             colore: 'mexBianco'
@@ -81,8 +81,8 @@ var app = new Vue ({
         ]
       },
       {
-        nome: 'Luisa',
-        immagine: 'img/avatar_2.jpg',
+        nome: 'Charmy',
+        immagine: 'img/charmander.png',
         attivo: true,
         messaggi: [
           {
@@ -92,7 +92,7 @@ var app = new Vue ({
             colore: 'mexVerde'
           },
           {
-            mex: 'Si, ma preferirei andare al cinema',
+            mex: 'Roar,charm charm, CHARMANDER!',
             dataOraMex: '10/01/2020 15:50:00',
             invOric: 'ricevuto',
             colore: 'mexBianco'
