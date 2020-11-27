@@ -105,7 +105,9 @@ var app = new Vue ({
 
     rispostaNuovoMessaggio: '', // riempito con il contenuto della funzione rispostaAutomatica
 
-    modelloRicercaContatto: ''//viene riempito dal testo che scrivo nella barra di ricerca
+    modelloRicercaContatto: '',//viene riempito dal testo che scrivo nella barra di ricerca
+    modelloRicercaContattoN: '',
+    isHidden: true
 
 
   },//FINE DATA
@@ -224,7 +226,6 @@ var app = new Vue ({
         };
       });
     },
-
   }
 
 });

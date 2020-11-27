@@ -135,15 +135,29 @@
               </div>
 
               <div class="navChatRight">
-                
-                <i class="fas fa-search"></i>
 
-                <label for="file-upload" class="custom-file-upload">
-                <i class="fas fa-paperclip"></i>
-                </label>
-                <input id="file-upload" type="file"/>
+                <div class="cercaOiniziaChat-n" v-if="!isHidden">
+                  <div class="cOiCinputContainer-n">
+                    <input
+                      type="text"
+                      class="cercaChatsearchBar-n"
+                      v-model="modelloRicercaContatto"
+                      @keyup="cercaConversazione"
+                      placeholder="Cerca all'interno della chat"
+                    >
+                  </div>
+                </div>
+                <div class="iconeNavbarContainer">
+                  <i class="fas fa-search" v-on:click="isHidden = !isHidden"></i>
 
-                <i class="fas fa-ellipsis-v"></i>
+                  <label for="file-upload" class="custom-file-upload">
+                  <i class="fas fa-paperclip"></i>
+                  </label>
+                  <input id="file-upload" type="file"/>
+
+                  <i class="fas fa-ellipsis-v"></i>
+                </div>
+
               </div>
 
             </div>
